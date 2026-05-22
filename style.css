@@ -5,7 +5,7 @@ body{
     align-items: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     align-items: center;
-    max-width: clamp(700px,45vw,1980px);
+    max-width: 100%;
     margin: 0 auto;
     
 }
@@ -16,15 +16,67 @@ body{
     color: white;
     flex-direction: column;
     width: 100%;
+    height: 500px;
+    
+}
+
+.link{
+    display: flex;
+    margin: 20px 0;
+    gap: 0 20px;
+
 }
 
 .header{
 display: flex;
-justify-content: space-between;
+justify-content: space-around;
+
 }
-.welcome{
+.logo{
+font-size: 20px;
+display: flex;
+margin: 20px 0;
+margin-right: 20px;
+font-weight: 600;
+
+}
+
+h1{
+font-size: 39px;
+text-wrap: balance;
+}
+
+
+button{
+    padding: 7px 30px;
+    border-radius: 9px;
+    color: white;
+    background-color: #3882F6;
+    margin-top: 5px;
     
 }
+button:hover{
+    font-weight: 900;
+}
+
+.welcome{
+    display: flex;
+    flex-direction: row;
+   justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 40px;
+
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+
+/*Bilderteil */
 
 .main{
 display: flex;
@@ -32,16 +84,38 @@ flex-direction: column;
 align-items: center;
 
 
+
 }
 .pics{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-}
+    padding-bottom: 80px;
+    
+
+}  
 figure{
 display: inline-flex; 
 flex-direction: column;
-margin: 0;   
+margin: 20px;   
+
+width: 300px ;
+
+
+
+
+
+}
+.figcaption{
+    display: flex;
+    flex-direction: column;
+}
+
+#pic{
+
+    border-radius: 10px;
+    border:5px solid goldenrod;
+
 }
 
 h2{
@@ -59,6 +133,8 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 height: 370px;
+padding: 0 380px;
+
 
 
 
@@ -67,10 +143,10 @@ height: 370px;
 }
 #text{
     display: flex;
-    font-size: 2em;
+    font-size: 1.8em;
     color: #1F2937;
     font-weight: 300;
-    flex-shrink: 1;
+    font-style: italic;
 }
 
 
@@ -79,7 +155,11 @@ p{
     display: flex;
     margin: 0;
 }
-
+#source{
+    display: flex;
+    align-self: flex-end;
+    font-weight: 900;
+}
 
 
 /*Vorletzter Teil*/
@@ -87,31 +167,50 @@ p{
 .action{
 display: flex;
 flex-direction: row;
-background-color: #3882F6;
-color: white;
+background-color: white;
+color: black;
 align-items: center;
-justify-content: space-between;
+justify-content: space-evenly;
 padding: 0 80px;
 margin: 70px 0;
-width: clamp(150px,25vw,1980px);
-height: 90px;
-border-radius: 6px;
+width: clamp(150px,50vw,1980px);
+height: 120px;
+border-radius: 180px;
+
+box-shadow: 
+        0px 0px 60px 10px gold,
+        inset 0px 0px 25px 8px gold;
 }
 .actiontext{
 display: flex;
 flex-direction: column;
+
 }
 
 #generator{
     display: flex;
-    color: white;
-    padding: 2px 10px;
+    color: black;
+    
+    padding: 5px 15px;
     height: 25px;
     align-items: center;
-    border: 2px solid white;
-    border-radius: 8px;
-   
+    border: 3px solid black;
+    border-radius: 15px;
+}
 
+#generator:hover{
+
+    box-shadow: 0 0 30px 10px gold;
+    border: 3px solid gold;
+}
+
+#call{
+font-size: 25px;    
+font-weight: 900;
+
+}
+#info{
+font-size: small;
 }
 
 /* unterster teil*/
@@ -134,12 +233,6 @@ a{
 }
 a:hover{
     font-weight: bold;
+    
 }
 
-#call{
-font-weight: 900;
-
-}
-#info{
-font-size: x-small;
-}
